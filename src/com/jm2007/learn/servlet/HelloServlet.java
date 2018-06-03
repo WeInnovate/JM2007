@@ -1,4 +1,4 @@
-package com.jm2007.learn.servler;
+package com.jm2007.learn.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

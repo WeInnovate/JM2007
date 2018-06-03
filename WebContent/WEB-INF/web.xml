@@ -15,7 +15,7 @@
 
 	<servlet>
 		<servlet-name>HelloServlet</servlet-name>
-		<servlet-class>com.jm2007.learn.servler.HelloServlet</servlet-class>
+		<servlet-class>com.jm2007.learn.servlet.HelloServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
