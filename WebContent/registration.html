@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body>
+	<h1>Register!!!</h1>
+	<form method="post" action="register">
+		User Name: <input type="text" name="un" /> <br />
+		Password: <input type="password" name="pass" /><br />
+		Email: <input type="email" name="email" /> <br />
+		Mobile: <input type="number" name="mobile" /> <br />
+		Gender: <input type="radio" name="gender" value="Male" />Male &nbsp; <input type="radio" name="gender" value="Female" />Female <br />
+		Courses: <input type="checkbox" name="courses" value="M2" />M2 &nbsp; <input type="checkbox" name="courses" value="M3" />M3<br />
+		
+		Batch slot:
+		<select name="batchSlot">
+		<option value="">---- Select ----</option>
+		<option value="Weekend">Weekend</option>
+		<option value="Weekdays">Weekdays</option>
+		</select>
+		<br />
+		Comment: <textarea rows="5" cols="100" name="comment"></textarea>
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>
