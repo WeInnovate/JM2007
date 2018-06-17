@@ -20,15 +20,34 @@
 		<servlet-name>abc</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
-
-
 	<context-param>
 		<param-name>institute</param-name>
 		<param-value>InfoCampus</param-value>
 	</context-param>
-	
 	<context-param>
 		<param-name>key</param-name>
 		<param-value>Value</param-value>
 	</context-param>
+
+	<filter>
+		<filter-name>f2</filter-name>
+		<filter-class>com.jm2007.learn.filter.LoginFilter2</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f2</filter-name>
+		<url-pattern>/login</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>f1</filter-name>
+		<filter-class>com.jm2007.learn.filter.LoginFilter1</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f1</filter-name>
+		<url-pattern>/login</url-pattern>
+	</filter-mapping>
+
+
+
 </web-app>

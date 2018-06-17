@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet({ "/LoginServlet", "/login" })
-public class LoginServlet extends HttpServlet {
+@WebServlet({ "/AdminLoginServlet", "/adminlogin" })
+public class AdminLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public LoginServlet() {
+	public AdminLoginServlet() {
 		super();
 	}
 
@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-System.out.println("Inside LoginServlet.");
+System.out.println("Inside AdminLoginServlet.");
 		String userName = request.getParameter("un");
 		String password = request.getParameter("pass");
 
