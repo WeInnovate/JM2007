@@ -42,6 +42,7 @@ System.out.println("Inside LoginServlet.");
 //			out.println(userName + " login successful!");
 //			out.println("<br /> <a href=\"index.html\">Home</a>");
 			request.setAttribute("msg", "success");
+			request.setAttribute("temp", "Remove this");
 			RequestDispatcher rd = request.getRequestDispatcher("profile");
 			rd.forward(request, response);
 		}

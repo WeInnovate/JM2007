@@ -24,6 +24,8 @@ public class ProfileServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.removeAttribute("temp");
+		request.setAttribute("msg", "Login Success");
 		String userName = request.getParameter("un");
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/HTML");
