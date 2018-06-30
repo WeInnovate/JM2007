@@ -7,7 +7,8 @@
 <body>
 <h1>Login!!!</h1>
 	<form method="post" action="login">
-		<input type="text" name="un" /> <input type="password" name="pass" />
+		<input type="text" name="username" /> 
+		<input type="password" name="password" />
 		<input type="submit" value="Submit" />
 	</form>
 </body>

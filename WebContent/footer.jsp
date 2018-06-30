@@ -6,8 +6,9 @@
 </head>
 <body>
 
-<hr/>
-Footer
+	<hr />
+	&copy; 2018, JM2007 |
+	<%=application.getInitParameter("institute")%>
 
 </body>
 </html>

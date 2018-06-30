@@ -25,7 +25,7 @@ public class LoginFilter1 implements Filter {
 			throws IOException, ServletException {
 		// preprocessing
 		System.out.println("LoginFilter1 preprocessing....");
-		String userName = request.getParameter("un");
+		String userName = request.getParameter("username");
 
 		// pass the request along the filter chain
 
@@ -52,7 +52,7 @@ public class LoginFilter1 implements Filter {
 	}
 
 	private boolean isBloackedUser(String userName) {
-		return userName.equalsIgnoreCase("atul@atul.com") ? true : false;
+		return userName != null && userName.equalsIgnoreCase("atul@atul.com") ? true : false;
 	}
 	
 	private boolean isAdmin(String userName) {

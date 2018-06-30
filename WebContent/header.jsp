@@ -5,7 +5,19 @@
 <title>Header</title>
 </head>
 <body>
-Header
-<hr/>
+
+
+	<%
+		String username = request.getParameter("username");
+
+		if (username == null) {
+			username = "Guest";
+		}
+	%>
+	
+	<%="Hello, " + username %>
+
+
+	<hr />
 </body>
 </html>

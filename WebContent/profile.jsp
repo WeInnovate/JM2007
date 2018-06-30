@@ -5,8 +5,8 @@
 <title>profile</title>
 </head>
 <body>
-Profile Page
+<%= request.getAttribute("msg").toString() %>
 <hr/>
-Your name goes here...
+<%= "Hello, "+request.getParameter("username") %>
 </body>
 </html>
