@@ -1,5 +1,6 @@
 <%@ page import="com.jm2007.learn.model.User"%>
 <%@ page errorPage="default-error-page.jsp" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
 			<tbody>
 				<tr class="bg-success">
 
-					<td><%=request.getAttribute("msg").toString()%></td>
+					<td>${requestScope.msg}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -40,19 +41,19 @@
 			<tbody>
 				<tr>
 					<th scope="row">Name</th>
-					<td><%=((User) request.getAttribute("user")).getName()%></td>
+					<td>${requestScope.user.name}</td>
 				</tr>
 				<tr>
 					<th scope="row">Email</th>
-					<td><%=((User) request.getAttribute("user")).getEmail()%></td>
+					<td>${requestScope.user.email}</td>
 				</tr>
 				<tr>
 					<th scope="row">Mobile</th>
-					<td><%=((User) request.getAttribute("user")).getMobile()%></td>
+					<td>${requestScope.user.mobile}</td>
 				</tr>
 				<tr>
 					<th scope="row">Gender</th>
-					<td><%=((User) request.getAttribute("user")).getGender()%></td>
+					<td>${requestScope.user.gender}</td>
 				</tr>
 				<tr>
 					<th scope="row">Courses</th>
@@ -71,7 +72,8 @@
 <%
 } %>
 
-<%= request.getParameter("temp") %>
+${param.temp}
+${paramValues.courses[0]}
 <jsp:include page="footer.jsp" />
 	</div>
 </body>
