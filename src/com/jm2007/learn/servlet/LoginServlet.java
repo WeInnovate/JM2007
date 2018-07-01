@@ -20,36 +20,33 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher rd1 = request.getRequestDispatcher("header.jsp");
+		/*RequestDispatcher rd1 = request.getRequestDispatcher("header.jsp");
 		RequestDispatcher rd2 = request.getRequestDispatcher("login.jsp");
 		RequestDispatcher rd3 = request.getRequestDispatcher("footer.jsp");
-		
+
 		rd1.include(request, response);
 		rd2.include(request, response);
-		rd3.include(request, response);
+		rd3.include(request, response);*/
+		response.sendRedirect("login.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-System.out.println("Inside LoginServlet.");
+		System.out.println("Inside LoginServlet.");
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
 
 		if (userName.equals(password)) {
-//			PrintWriter out = response.getWriter();
-//			response.setContentType("text/HTML");
-//			out.println(userName + " login successful!");
-//			out.println("<br /> <a href=\"index.html\">Home</a>");
 			request.setAttribute("msg", "Login success!!!");
 			request.setAttribute("temp", "Remove this");
 			RequestDispatcher rd = request.getRequestDispatcher("profile");
 			rd.forward(request, response);
+		} else {
+			request.setAttribute("msg", "Login Failed!!!");
+			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			rd.forward(request, response);
 		}
-		else {
-//			response.sendRedirect("login.html");
-			response.sendRedirect("http://www.google.co.in/");
-		}
-		
+
 	}
 
 }
