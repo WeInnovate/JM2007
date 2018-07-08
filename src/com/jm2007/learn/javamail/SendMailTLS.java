@@ -14,12 +14,12 @@ public class SendMailTLS {
 
 	public static void main(String[] args) {
 
-		String fromAddress = "karaninfo2018@gmail.com";
+		String fromAddress = "giveyouremailaddress@gmail.com";
 		String toAddress = "ajay7444@gmail.com";
 		String ccAddress = "kritika.9jan@gmail.com,amit.robert2010@gmail.com";
 		String bccAddress = "atul.wnw@gmail.com";
 		String userName = "karaninfo2018@gmail.com";
-		String password = "Sahai@#123";
+		String password = "giveyouremailpassword";
 		String subject = "JavaMail - Testing";
 		String text = "Hello this is test mail. \n You can delete it.";
 
